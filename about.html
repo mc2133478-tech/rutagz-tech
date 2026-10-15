@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | RUTAGZ Tech</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-r">R</span>
+            <div>
+                <h2>RUTAGZ</h2>
+                <small>TECH</small>
+            </div>
+        </a>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="nav-button">Get Started</a>
+    </header>
+
+
+    <!-- ABOUT HERO -->
+    <section class="section about-hero">
+        <p class="section-tag">GET TO KNOW US</p>
+
+        <h1>We Build Technology.<br>
+            <span>We Turn Ideas Into Reality.</span>
+        </h1>
+
+        <p class="section-description">
+            RUTAGZ Tech is a technology company concept focused on
+            creating digital solutions that help people, businesses
+            and organizations move forward.
+        </p>
+
+        <a href="services.html" class="primary-button">
+            Explore Our Services →
+        </a>
+    </section>
+
+
+    <!-- OUR STORY -->
+    <section class="section about-content">
+        <div class="about-card">
+            <p class="section-tag">OUR STORY</p>
+
+            <h2>Why <span>RUTAGZ?</span></h2>
+
+            <p>
+                RUTAGZ Tech was created around a simple idea:
+                technology should help turn ambitious ideas into
+                useful, practical solutions.
+            </p>
+
+            <p>
+                Our planned focus is on website development, mobile
+                applications, custom software and digital tools that
+                solve real problems.
+            </p>
+
+            <p>
+                As RUTAGZ grows, the goal is to develop a company
+                known for creativity, reliability and forward-thinking
+                technology.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- MISSION AND VISION -->
+    <section class="section">
+        <p class="section-tag">OUR DIRECTION</p>
+
+        <h2>What Drives <span>Us</span></h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="icon">🎯</div>
+                <h3>Our Mission</h3>
+                <p>
+                    To create useful, accessible and reliable digital
+                    solutions that help businesses and organizations
+                    solve problems and achieve their goals.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🚀</div>
+                <h3>Our Vision</h3>
+                <p>
+                    To grow into an innovative technology company
+                    that develops impactful digital products and
+                    serves customers across different industries.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">💡</div>
+                <h3>Our Values</h3>
+                <p>
+                    Creativity, continuous learning, reliability,
+                    quality and a commitment to solving problems
+                    through technology.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="section about-cta">
+        <h2>Let's Build Something <span>Great.</span></h2>
+
+        <p class="section-description">
+            Have an idea or a problem that technology could solve?
+            Let's explore the possibilities.
+        </p>
+
+        <a href="contact.html" class="primary-button">
+            Talk to Us →
+        </a>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 RUTAGZ Tech. All rights reserved.</p>
+    </footer>
+
+
+    <!-- MOBILE NAVIGATION -->
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const navbar = document.querySelector(".navbar");
+        const navLinks = document.querySelectorAll("#main-nav a");
+
+        menuButton.addEventListener("click", function () {
+            const isOpen = navbar.classList.toggle("menu-open");
+
+            menuButton.setAttribute("aria-expanded", isOpen);
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+        });
+
+        navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+                navbar.classList.remove("menu-open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-label", "Open navigation menu");
+            });
+        });
+    </script>
+
+</body>
+</html>

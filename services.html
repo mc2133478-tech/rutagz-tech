@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Services | RUTAGZ Tech</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-r">R</span>
+            <div>
+                <h2>RUTAGZ</h2>
+                <small>TECH</small>
+            </div>
+        </a>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="nav-button">Get Started</a>
+
+    </header>
+
+
+    <!-- SERVICES HERO -->
+    <section class="section services-page-hero">
+
+        <p class="section-tag">WHAT WE DO</p>
+
+        <h1>Technology That <span>Moves You Forward.</span></h1>
+
+        <p class="section-description">
+            From professional websites to powerful software systems,
+            RUTAGZ Tech helps turn your ideas into digital solutions.
+        </p>
+
+        <a href="contact.html" class="primary-button">
+            Start a Project →
+        </a>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="section" id="all-services">
+
+        <p class="section-tag">OUR EXPERTISE</p>
+
+        <h2>Explore Our <span>Services</span></h2>
+
+        <p class="section-description">
+            Practical digital solutions designed for businesses,
+            schools, organizations and individuals.
+        </p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="icon">🌐</div>
+                <h3>Website Development</h3>
+                <p>
+                    Modern, responsive websites that help businesses
+                    establish a professional online presence.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">📱</div>
+                <h3>Mobile Applications</h3>
+                <p>
+                    Mobile app solutions designed around the needs
+                    of your users and your business.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">💻</div>
+                <h3>Custom Software</h3>
+                <p>
+                    Software built around specific business processes,
+                    challenges and goals.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🏫</div>
+                <h3>School Management Systems</h3>
+                <p>
+                    Digital tools to help manage student records,
+                    academic information and school administration.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🛒</div>
+                <h3>E-Commerce</h3>
+                <p>
+                    Online stores that enable businesses to display
+                    products and sell to customers digitally.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">📊</div>
+                <h3>Business Solutions</h3>
+                <p>
+                    Digital tools that help organizations improve
+                    workflows, manage information and work efficiently.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="section services-cta">
+
+        <h2>Have an Idea in <span>Mind?</span></h2>
+
+        <p class="section-description">
+            Let's discuss how technology can help bring your idea to life.
+        </p>
+
+        <a href="contact.html" class="primary-button">
+            Contact RUTAGZ →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 RUTAGZ Tech. All rights reserved.</p>
+    </footer>
+
+
+    <!-- MOBILE NAVIGATION -->
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const navbar = document.querySelector(".navbar");
+        const navLinks = document.querySelectorAll("#main-nav a");
+
+        menuButton.addEventListener("click", function () {
+            const isOpen = navbar.classList.toggle("menu-open");
+
+            menuButton.setAttribute("aria-expanded", isOpen);
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+        });
+
+        navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+                navbar.classList.remove("menu-open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-label", "Open navigation menu");
+            });
+        });
+    </script>
+
+</body>
+</html>
